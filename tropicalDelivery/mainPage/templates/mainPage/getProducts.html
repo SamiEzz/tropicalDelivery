@@ -1,0 +1,14 @@
+{% if all_product_list %}
+<ul>
+    {% for product in all_product_list %}
+    <img width="250" height="250" src="{{ product.image }}">
+    <li>{{ product.title }}</li>
+    <li>{{ product.description }}</li>
+    <li>{{ product.type }}</li>
+    <li>{{ product.price }} €</li>
+    <li><button>Order</button> </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No products are available.</p>
+{% endif %}
