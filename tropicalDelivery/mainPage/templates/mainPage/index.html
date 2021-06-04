@@ -56,10 +56,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">XX</a>
+                    <a class="nav-link" onclick="getLocation()" href="#">Get Localisation</a>
                 </li>
             </ul>
         </div>
+
+        {% include "mainPage/getPosition.html" %}
         <div class="row">
             <div class="col-sm">
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">

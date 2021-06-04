@@ -1,4 +1,4 @@
-from .models import Product
+from .models import Cart, Product
 from django.shortcuts import render
 
 # Create your views here.
