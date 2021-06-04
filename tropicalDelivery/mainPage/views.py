@@ -32,6 +32,9 @@ def products(request):
 
 
 def home(request):
+    all_product_list = Product.objects.all()
     template = loader.get_template('mainPage/index.html')
-    context = {'ok': 1}
+    context = {
+        'all_product_list': all_product_list,
+    }
     return HttpResponse(template.render(context, request))

@@ -1,14 +1,19 @@
 {% if all_product_list %}
-<ul>
+
+<div class="row">
     {% for product in all_product_list %}
-    <img width="250" height="250" src="{{ product.image }}">
-    <li>{{ product.title }}</li>
-    <li>{{ product.description }}</li>
-    <li>{{ product.type }}</li>
-    <li>{{ product.price }} €</li>
-    <li><button>Order</button> </li>
+    <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ product.image }}" class="card-img-top" alt="..." width=200 height=200>
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</div>
 {% else %}
 <p>No products are available.</p>
 {% endif %}
