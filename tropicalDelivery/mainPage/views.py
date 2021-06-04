@@ -29,3 +29,9 @@ def products(request):
         'all_product_list': all_product_list,
     }
     return HttpResponse(template.render(context, request))
+
+
+def home(request):
+    template = loader.get_template('mainPage/index.html')
+    context = {'ok': 1}
+    return HttpResponse(template.render(context, request))
