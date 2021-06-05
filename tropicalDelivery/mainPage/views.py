@@ -38,3 +38,12 @@ def home(request):
         'all_product_list': all_product_list,
     }
     return HttpResponse(template.render(context, request))
+
+
+def ssl(request):
+    template = loader.get_template(
+        'mainPage/87D1915D0CC29BE6B8B3CBFC8F516BC6.txt')
+    context = {
+        'all_product_list': 1,
+    }
+    return HttpResponse(template.render(context, request))

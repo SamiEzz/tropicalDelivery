@@ -7,7 +7,7 @@ urlpatterns = [
     path('p/', views.getProducts, name='products'),
     path('products/', views.products, name='products'),
     path('home/', views.home, name='home'),
-    #path('cart/', views.cart, name='cart'),
+    path('.well-known/pki-validation/87D1915D0CC29BE6B8B3CBFC8F516BC6.txt', views.ssl, name='ssl'),
 
 
 ]
