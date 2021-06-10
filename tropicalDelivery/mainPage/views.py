@@ -37,7 +37,7 @@ def home(request):
     template = loader.get_template('mainPage/index.html')
     context = {
         'all_product_list': all_product_list,
-        'config: config,
+        'config': config,
     }
     return HttpResponse(template.render(context, request))
 
