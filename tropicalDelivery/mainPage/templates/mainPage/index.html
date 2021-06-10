@@ -9,10 +9,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
-    <title>{{ config.title }}</title>
+    <title>{% if config %}{{ config.title }}{% endif %}</title>
 </head>
 
 <body>
+    {% include "mainPage/navbar.html" %}
     <div class="container">
         <div class="row">
             <ul class="nav nav-pills">
@@ -156,10 +157,9 @@
     <!-- Copyrights -->
     <div class="bg-light py-4">
         <div class="container text-center">
-            <p class="text-muted mb-0 py-2">© {{ config.year }} <a href={{ config.website }}>{{ config.name }}</a>. All rights reserved.</p>
+            <p class="text-muted mb-0 py-2">© {% if config %}{{ config.year }} <a href={{ config.website }}>{{ config.name }}{% endif %}</a>. All rights reserved.</p>
         </div>
     </div>
     </footer>
     <!-- End -->
-
 </html>

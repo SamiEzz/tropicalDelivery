@@ -32,7 +32,11 @@ def products(request):
 
 
 def home(request):
-    config = globalConfig.objects.all()[0]
+    configTable = globalConfig.objects.all()
+    if configTable:
+        config = configTable[0]
+    else:
+        config=[]
     all_product_list = Product.objects.all()
     template = loader.get_template('mainPage/index.html')
     context = {
