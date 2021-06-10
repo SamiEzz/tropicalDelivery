@@ -25,7 +25,7 @@ SECRET_KEY = 'gf)e@7t2!va6_h@fh$u@q5*qaze7b8ad0-94*yd6dyfmr&c)a3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1","www.tropicaldeliveries.com","tropicaldeliveries.com"]
 
 
 # Application definition
