@@ -1,4 +1,4 @@
-from .models import Cart, Product
+from .models import Cart, Product,globalConfig
 from django.shortcuts import render
 
 # Create your views here.
@@ -32,10 +32,12 @@ def products(request):
 
 
 def home(request):
+    config = globalConfig.objects.all()
     all_product_list = Product.objects.all()
     template = loader.get_template('mainPage/index.html')
     context = {
         'all_product_list': all_product_list,
+        'config: config,
     }
     return HttpResponse(template.render(context, request))
 
