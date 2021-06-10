@@ -8,60 +8,14 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
+    {% include "mainPage/header.html" %}
     <title>{% if config %}{{ config.title }}{% endif %}</title>
 </head>
 
 <body>
     {% include "mainPage/navbar.html" %}
     <div class="container">
-        <div class="row">
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Drinks</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Light Alcool</a></li>
-                        <li><a class="dropdown-item" href="#">Wine</a></li>
-                        <li><a class="dropdown-item" href="#">Soft drinks</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">See more</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Snacks</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Pringles</a></li>
-                        <li><a class="dropdown-item" href="#">M&Ms</a></li>
-                        <li><a class="dropdown-item" href="#">Prince</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">See more</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tabacco</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Winston</a></li>
-                        <li><a class="dropdown-item" href="#">Camel</a></li>
-                        <li><a class="dropdown-item" href="#">Marlboro</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">See more</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" onclick="getLocation()" href="#">Get Localisation</a>
-                </li>
-            </ul>
-        </div>
-
+        
         {% include "mainPage/getPosition.html" %}
         <div class="row">
             <div class="col-sm">
@@ -78,6 +32,7 @@
                             <img height=600 width=800 src="https://en.plageprivee.com/assets/img/plage/424_x.jpg" class="d-block w-100" alt="..."> .
                         </div>
                     </div>
+                    <div class="float-right">
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -86,6 +41,7 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                
+                    </div>
                 </div>
             </div>
             
@@ -155,11 +111,8 @@
     </div>
 
     <!-- Copyrights -->
-    <div class="bg-light py-4">
-        <div class="container text-center">
-            <p class="text-muted mb-0 py-2">© {% if config %}{{ config.year }} <a href={{ config.website }}>{{ config.name }}{% endif %}</a>. All rights reserved.</p>
-        </div>
-    </div>
+    
+    {% include "mainPage/footer.html" %}
     </footer>
     <!-- End -->
 </html>
