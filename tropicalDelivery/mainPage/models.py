@@ -3,6 +3,12 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+class globalConfig(models.Model):
+    title = models.CharField(max_length=200)
+    website = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    def __str__(self):
+        return self.name
 
 class Provider(models.Model):
     name = models.CharField(max_length=200)
