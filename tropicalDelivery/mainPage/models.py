@@ -8,7 +8,7 @@ class globalConfig(models.Model):
     website = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     def __str__(self):
-        return self.name
+        return self.title
 
 class Provider(models.Model):
     name = models.CharField(max_length=200)
